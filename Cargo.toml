@@ -1,0 +1,16 @@
+[package]
+name = "cyber_go_virus"
+version = "5.0.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.38", features = ["full"] } # High-performance asynchronous threading
+sysinfo = "0.30.12"                               # Bare-metal native process tracing
+windows = { version = "0.56", features = [        # Direct Win32 Low-Level API Bindings
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_Threading",
+    "Win32_System_Memory",
+    "Win32_Security"
+] }
+colored = "2.1.0"                                 # Threat reporting layout
+lazy_static = "1.4.0"                             # Safe in-memory global configurations
